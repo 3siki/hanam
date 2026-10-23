@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>가을, 나를 입다</title>
+<meta name="description" content="하남시 별자리 학습공간 · 11/6~11/27 매주 금 오전 10시 · 바른 자세부터 미니 패션쇼까지 4주 모델 워킹 강좌 · 하남 시민 성인 8명 한정">
+<meta name="theme-color" content="#1F4030">
+<!-- ✏️ 링크 미리보기(카톡·당근). 배포 주소가 다르면 아래 og:url, og:image 두 줄의 주소를 바꾸세요 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="가을, 나를 입다 · 품격 있는 자세와 모델 워킹">
+<meta property="og:description" content="하남시 별자리 학습공간 · 11월 매주 금 오전 · 성인 8명 한정">
+<meta property="og:url" content="https://hanam-walking.netlify.app/">
+<meta property="og:image" content="https://hanam-walking.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1C6 6 4 12 7 18c1.5 2.8 3.3 4 5 5 1.7-1 3.5-2.2 5-5 3-6 1-12-5-17z' fill='%23B4521F'/%3E%3C/svg%3E">
+<!--
+  강좌 홍보 포스터 템플릿 (모바일 우선)
+  ✏️ 표시가 있는 곳만 바꾸면 다른 강좌에 재사용할 수 있습니다.
+  색상은 :root 토큰 5개(--green, --rust, --gold, --bg, --ink)만 바꾸면 전체 톤이 바뀝니다.
+  개강일은 script 맨 위 START_DATE 한 줄만 수정하세요.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;700;800&family=Gowun+Dodum&family=Nanum+Brush+Script&family=Cormorant+Garamond:wght@600;700&display=swap">
+<style>
+/* Layout: a printed poster scrolled on a phone — headline, hero photo fading into paper, date slab, 4 fittings, green call band. */
+:root{
+  --bg:#F7F1E7; --paper:#FFFCF6; --ink:#2A2620; --muted:#756B5E;
+  --green:#1F4030; --rust:#B4521F; --gold:#C49548; --line:#E6DCCB;
+  --band:#1F4030; --on-band:#F7F1E7;
+  --f-display:"Hahmlet","Nanum Myeongjo",serif;
+  --f-body:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-num:"Cormorant Garamond","Times New Roman",serif;
+  --f-hand:"Nanum Brush Script","Nanum Pen Script",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121C17; --paper:#1A2721; --ink:#F2EBDF; --muted:#AFA594;
+  --green:#9CC5A8; --rust:#E88B57; --gold:#DDB66E; --line:#2D3C34;
+  --band:#0C1511; --on-band:#F2EBDF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121C17; --paper:#1A2721; --ink:#F2EBDF; --muted:#AFA594;
+  --green:#9CC5A8; --rust:#E88B57; --gold:#DDB66E; --line:#2D3C34;
+  --band:#0C1511; --on-band:#F2EBDF; color-scheme:dark}
+
+*{box-sizing:border-box}
+img{max-width:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7;padding-block:0 84px;word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+p,dd,li,.big,.desc{text-wrap:pretty}
+.pad{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2,h3{margin:0;font-family:var(--f-display);text-wrap:balance}
+p{margin:0}
+
+/* ── HERO ── */
+.hero{position:relative;padding-block:28px 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;position:relative}
+.kicker{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--green)}
+.kicker::after{content:"";width:40px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(58px,17vw,104px);line-height:1.02;font-weight:800;letter-spacing:-.03em;margin-top:14px;position:relative;z-index:2}
+.hero h1 .a{color:var(--rust);display:block}
+.hero h1 .b{color:var(--green);display:block}
+.photo{position:relative;margin-top:6px;margin-right:calc(-1 * max(18px,env(safe-area-inset-right,0px)));z-index:1}
+.photo img{display:block;width:88%;margin-left:auto;max-width:100%;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 72%,transparent 100%),linear-gradient(to right,transparent 0,#000 16%,#000 86%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 72%,transparent 100%),linear-gradient(to right,transparent 0,#000 16%,#000 86%,transparent 100%);mask-composite:intersect}
+.photo .credit{position:absolute;right:max(18px,env(safe-area-inset-right,0px));top:62px;font-size:11px;color:var(--muted);writing-mode:vertical-rl;letter-spacing:.2em}
+.lead{margin-top:-64px;position:relative;z-index:3;display:flex;flex-direction:column;gap:14px}
+.lead .big{font-family:var(--f-display);font-size:clamp(23px,6.2vw,30px);line-height:1.4;font-weight:400}
+.lead .big em{font-style:normal;font-weight:700;color:var(--rust)}
+.lead .rule{width:56px;height:2px;background:var(--gold)}
+.lead h2{font-size:19px;color:var(--green)}
+.lead .desc{color:var(--muted);font-size:15px;max-width:34em}
+.leaf{position:absolute;pointer-events:none;z-index:2}
+
+@media (min-width:720px){
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:start}
+  .hero h1{grid-column:1}
+  .photo{grid-column:2;grid-row:1 / span 2;margin-top:0}
+  .photo img{width:100%}
+  .lead{grid-column:1;margin-top:28px}
+}
+
+/* ── DATE SLAB ── */
+.slab{margin-top:36px;display:grid;grid-template-columns:1fr;gap:18px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dates{font-family:var(--f-num);font-weight:700;color:var(--green);font-size:clamp(46px,13vw,68px);line-height:1;letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums;display:flex;align-items:center;gap:.18em;flex-wrap:wrap}
+.dates span.dash{display:inline-block;width:.55em;height:3px;background:var(--gold)}
+.when{display:flex;flex-direction:column;gap:2px;font-family:var(--f-display);font-size:19px}
+.when b{font-weight:700}
+.dday{align-self:flex-start;font-family:var(--f-body);font-size:14px;color:var(--paper);background:var(--rust);padding:4px 14px;border-radius:999px;margin-top:8px}
+@media (min-width:560px){.slab{grid-template-columns:auto 1fr;align-items:center;gap:28px}}
+
+/* ── INFO ── */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:28px;border-radius:10px;overflow:hidden}
+.info div{background:var(--paper);padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.info svg{flex:none;width:24px;height:24px;color:var(--green)}
+.info dt{font-family:var(--f-display);font-weight:700;font-size:15px}
+.info dd{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.info dt .nm{font-weight:800;color:var(--ink)}
+.info dt{font-weight:400}
+.info dt:not(:has(.nm)){font-weight:700}
+.info dd.nw{white-space:nowrap;font-size:13px}
+.info dl{margin:0;min-width:0}
+@media (min-width:720px){.info{grid-template-columns:repeat(4,1fr)}}
+
+/* ── 4 WEEKS ── */
+.weeks-head{margin-top:52px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.weeks-head h2{font-size:clamp(25px,7vw,34px);font-weight:800;color:var(--green)}
+.weeks-head h2 em{font-style:normal;color:var(--rust)}
+.weeks{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wk{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 12px 14px 14px;min-height:190px;display:flex;flex-direction:column;gap:4px;overflow:hidden}
+.wk .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-num);font-weight:700;font-size:18px;color:var(--paper);background:var(--green)}
+.wk:nth-child(even) .n{background:var(--rust)}
+.wk .d{font-family:var(--f-num);font-weight:700;font-size:26px;line-height:1;margin-top:8px;color:var(--green)}
+.wk:nth-child(even) .d{color:var(--rust)}
+.wk h3{font-family:var(--f-body);font-weight:400;font-size:15px;line-height:1.45;position:relative;z-index:1;max-width:58%;margin-top:6px}
+.wk .fig{position:absolute;right:2px;bottom:8px;width:40%;height:78%;background:var(--ink);opacity:.82;
+  -webkit-mask:var(--m) center bottom/contain no-repeat;mask:var(--m) center bottom/contain no-repeat}
+.wk .wash{position:absolute;right:-6px;bottom:6px;width:58%;height:34%;border-radius:50%;filter:blur(10px);opacity:.25;transform:rotate(-14deg);background:var(--green)}
+.wk:nth-child(even) .wash{background:var(--rust)}
+.wk.final{border-color:var(--rust)}
+@media (min-width:720px){.weeks{grid-template-columns:repeat(4,1fr)}}
+
+/* ── TRUST ── */
+.trust{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--green)}
+.trust li{display:flex;align-items:center;gap:6px}
+.trust li::before{content:"";width:12px;height:7px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg) translateY(-2px)}
+
+/* ── AFTER ── */
+.after{margin-top:52px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 20px}
+.after-head{display:flex;flex-direction:column;gap:6px}
+.badge4{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;font-family:var(--f-display);font-size:19px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.badge4 b{color:var(--rust);font-size:26px;font-weight:800;letter-spacing:-.01em}
+.after h2{font-size:clamp(24px,6.6vw,32px);font-weight:800;line-height:1.3;color:var(--green)}
+.after h2 em{font-style:normal;color:var(--ink);font-weight:400}
+.change{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:0}
+.change li{display:grid;grid-template-columns:4.2em 1fr;column-gap:12px;padding:16px 0;border-top:1px dashed var(--line);align-items:center}
+.change .k{grid-row:span 3;align-self:start;font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--rust)}
+.change .b4{font-size:15px;color:var(--muted)}
+.change .b4::before,.change .af::before{display:inline-block;font-family:var(--f-body);font-weight:400;font-size:11px;line-height:1;padding:4px 8px;border-radius:999px;margin-right:8px;vertical-align:2px}
+.change .b4::before{content:"지금";border:1px solid var(--line);color:var(--muted)}
+.change .ar{display:block;width:16px;height:22px;margin:6px 0 6px 14px;color:var(--gold)}
+.change .ar svg{width:100%;height:100%;display:block}
+.change .ar .rt{display:none}
+.change .af{font-family:var(--f-display);font-weight:700;font-size:17px;line-height:1.45}
+.change .af::before{content:"4주 후";background:var(--rust);color:var(--paper)}
+.change .hd{display:none}
+@media (min-width:720px){
+  .change li{grid-template-columns:5em 1fr 72px 1fr;column-gap:16px}
+  .change .k{grid-row:auto;align-self:center}
+  .change .b4,.change .af{text-align:center}
+  .change .ar{width:44px;height:14px;margin:0;justify-self:center}
+  .change .ar .dn{display:none}
+  .change .ar .rt{display:block}
+  .change .b4::before,.change .af::before{content:none}
+  .change .hd{display:grid;border-top:0;padding:0 0 10px}
+  .change .hd span{text-align:center;font-family:var(--f-display);font-size:15px;color:var(--muted)}
+  .change .hd .t4{color:var(--rust);font-weight:800;font-size:17px}
+}
+
+/* ── SCENE TITLE ── */
+.scene-title{display:flex;align-items:center;gap:12px;font-size:clamp(22px,6vw,28px);font-weight:800;color:var(--green)}
+.scene-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ── CLASS PHOTOS ── */
+.scene{margin-top:52px}
+.scene .pics{margin-top:12px;display:grid;grid-template-columns:3fr 2fr;gap:8px}
+.scene img{display:block;width:100%;height:100%;object-fit:cover;border-radius:8px;aspect-ratio:auto;max-width:100%}
+.scene p{margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* ── CALL BAND ── */
+.band{margin-top:56px;background:var(--band);color:var(--on-band);position:relative;overflow:hidden}
+.band .wrap{padding-block:44px 40px;display:flex;flex-direction:column;gap:18px;position:relative;z-index:1}
+.hand{font-family:var(--f-hand);font-size:clamp(34px,9vw,46px);line-height:1.15;transform:rotate(-4deg);transform-origin:left;color:var(--on-band);opacity:.92}
+.pill{align-self:flex-start;background:var(--gold);color:#2A2620;font-family:var(--f-display);font-weight:700;font-size:14px;padding:5px 16px;border-radius:999px}
+.phone{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.phone .ic{flex:none;width:52px;height:52px;border-radius:50%;background:var(--on-band);color:var(--band);display:grid;place-items:center}
+.phone .num{font-family:var(--f-num);font-weight:700;font-size:clamp(38px,11vw,58px);letter-spacing:.01em;line-height:1;font-variant-numeric:lining-nums;user-select:all;color:var(--on-band);text-decoration:none}
+.band .sub{opacity:.8}
+.copy{align-self:flex-start;font:15px var(--f-body);border:1px solid color-mix(in srgb,var(--on-band) 50%,transparent);background:transparent;color:var(--on-band);border-radius:999px;padding:9px 20px;cursor:pointer}
+.foot b{opacity:1;font-weight:700}
+.foot{border-top:1px solid color-mix(in srgb,var(--on-band) 20%,transparent);margin-top:12px;padding-top:16px;font-size:13px;opacity:.7}
+
+/* ── STICKY BAR ── */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--rust);color:#FFF8F0;
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  transition:transform .3s}
+.bar .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.bar .t{flex:1;min-width:0;line-height:1.3;font-size:13px}
+.bar .t b{display:block;font-family:var(--f-num);font-size:21px;letter-spacing:.02em}
+.bar button{flex:none;font:600 14px var(--f-body);background:#FFF8F0;color:#7A3412;border:0;border-radius:999px;padding:9px 16px;cursor:pointer}
+.bar.hide{transform:translateY(110%)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+</style>
+</head>
+<body>
+
+
+<!-- ── HERO ── -->
+<header class="hero pad">
+  <div class="wrap">
+    <svg class="leaf" style="right:6%;top:6px;width:44px;transform:rotate(28deg)" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C6 6 4 12 7 18c1.5 2.8 3.3 4 5 5 1.7-1 3.5-2.2 5-5 3-6 1-12-5-17z" fill="var(--rust)" opacity=".85"/><path d="M12 4v19" stroke="var(--paper)" stroke-width=".8" opacity=".6"/></svg>
+    <div class="hero-grid">
+      <div>
+        <!-- ✏️ 주최 -->
+        <div class="kicker">별자리 학습공간 · 하남시</div>
+        <!-- ✏️ 메인 카피 -->
+        <h1><span class="a">가을,</span><span class="b">나를 입다</span></h1>
+      </div>
+      <!-- ✏️ 대표 이미지 -->
+      <figure class="photo" style="margin-bottom:0;margin-left:0">
+        <img src="img/hero.jpg" alt="재킷과 와이드 팬츠 차림의 두 여성이 런웨이를 걷는 모습">
+      </figure>
+      <div class="lead">
+        <p class="big">자세부터 걸음까지,<br><em>나의 분위기</em>가 달라지는 시간</p>
+        <span class="rule"></span>
+        <h2>품격 있는 자세와 모델 워킹</h2>
+        <p class="desc">바른 자세와 건강한 걸음으로 균형과 자신감을 기르고, 포즈부터 미니 패션쇼까지 나만의 매력을 표현해 보세요.</p>
+        <!-- ✏️ 신뢰 요소 -->
+        <ul class="trust">
+          <li>하남시 평생학습 사업</li>
+          <li>공공 학습공간에서 진행</li>
+          <li>전문강사 직강 · 소수 정예</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ✏️ 일정 -->
+    <div class="slab">
+      <div class="dates">11.06<span class="dash" aria-label="부터"></span>11.27</div>
+      <div class="when">
+        <span><b>매주 금요일</b> · 총 4회</span>
+        <span>오전 10:00 – 12:00</span>
+        <span class="dday" id="dday">11월 6일 개강</span>
+      </div>
+    </div>
+
+    <!-- ✏️ 기본 정보 -->
+    <div class="info">
+      <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><dl><dt>대상</dt><dd>하남시 성인 시민 8명</dd></dl></div>
+      <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 11h3v10h5v-6h4v6h5V11h3z"/></svg><dl><dt>장소</dt><dd>하남시 덕풍청소년문화의집</dd></dl></div>
+      <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6.5" r="3.5"/><path d="M12 11c-4 0-7 2.5-7 6v4h14v-4c0-3.5-3-6-7-6zm0 2 1.4 2.4L12 20l-1.4-4.6z"/></svg><dl><dt>강사 <b class="nm">박채원</b></dt><dd class="nw">모델 워킹 전문강사</dd></dl></div>
+      <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 15.5c0-1 .6-1.6 1.6-1.6h5.2c1 0 1.8-.4 2.5-1.1l2.3-2.6c.4-.5 1.2-.4 1.5.2l.6 1c1.4 2.2 3.8 3.5 6.4 3.5.5 0 .9.4.9.9V18c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1z"/></svg><dl><dt>준비물</dt><dd>편안한 신발, 움직이기 편한 복장</dd></dl></div>
+    </div>
+
+    <!-- ✏️ 회차 -->
+    <div class="weeks-head"><h2>네 번의 만남, <em>달라지는 나</em></h2></div>
+    <div class="weeks">
+      <div class="wk"><span class="n">01</span><span class="d">11.06</span><h3>바른 자세와 기본 워킹</h3><span class="wash"></span><span class="fig" style="--m:url(img/fig0.png)"></span></div>
+      <div class="wk"><span class="n">02</span><span class="d">11.13</span><h3>포즈와 턴, 나만의 표현</h3><span class="wash"></span><span class="fig" style="--m:url(img/fig1.png)"></span></div>
+      <div class="wk"><span class="n">03</span><span class="d">11.20</span><h3>음악과 함께 런웨이 워킹</h3><span class="wash"></span><span class="fig" style="--m:url(img/fig2.png)"></span></div>
+      <div class="wk final"><span class="n">04</span><span class="d">11.27</span><h3>의상과 소품으로 미니 패션쇼</h3><span class="wash"></span><span class="fig" style="--m:url(img/fig3.png)"></span></div>
+    </div>
+
+    <!-- ✏️ 4주 후 변화 -->
+    <section class="after">
+      <div class="after-head">
+        <p class="badge4"><b>4주 후,</b>이렇게 달라져요</p>
+        <h2>거울 속 내가<br><em>먼저 알아봅니다</em></h2>
+      </div>
+      <ol class="change">
+        <li class="hd" aria-hidden="true"><span></span><span>지금</span><span></span><span class="t4">4주 후</span></li>
+        <li><span class="k">자세</span><span class="b4">굽은 어깨, 흔들리는 중심</span><span class="ar" aria-hidden="true"><svg class="dn" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v19M2 14l6 6 6-6"/></svg><svg class="rt" viewBox="0 0 44 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h41M36 1l6 6-6 6"/></svg></span><span class="af">곧게 선 자세와 안정된 균형</span></li>
+        <li><span class="k">걸음</span><span class="b4">습관대로 걷던 걸음</span><span class="ar" aria-hidden="true"><svg class="dn" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v19M2 14l6 6 6-6"/></svg><svg class="rt" viewBox="0 0 44 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h41M36 1l6 6-6 6"/></svg></span><span class="af">일자로 당당하게 걷는 워킹</span></li>
+        <li><span class="k">표현</span><span class="b4">사진 앞에서 어색한 손과 시선</span><span class="ar" aria-hidden="true"><svg class="dn" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v19M2 14l6 6 6-6"/></svg><svg class="rt" viewBox="0 0 44 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h41M36 1l6 6-6 6"/></svg></span><span class="af">나에게 어울리는 포즈와 미소</span></li>
+        <li><span class="k">자신감</span><span class="b4">무대는 남의 이야기</span><span class="ar" aria-hidden="true"><svg class="dn" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v19M2 14l6 6 6-6"/></svg><svg class="rt" viewBox="0 0 44 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h41M36 1l6 6-6 6"/></svg></span><span class="af">직접 연출한 패션쇼 무대에 선 경험</span></li>
+      </ol>
+    </section>
+
+    <!-- ✏️ 현장 사진 -->
+    <section class="scene">
+      <h2 class="scene-title">지난 수업 현장</h2>
+      <div class="pics">
+        <img src="img/cls1.jpg" alt="수강생들이 일렬로 워킹 연습을 하는 모습">
+        <img src="img/cls2.jpg" alt="수강생 두 명이 미니 패션쇼 무대를 걷는 모습">
+      </div>
+      <p>평상복으로 시작해도 충분해요. 마지막 주에는 원하는 옷과 소품으로 무대에 섭니다.</p>
+    </section>
+  </div>
+</header>
+
+<!-- ✏️ 신청·문의 -->
+<section class="band pad" id="call">
+  <svg class="leaf" style="right:-18px;bottom:90px;width:96px;transform:rotate(-24deg);opacity:.35" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C6 6 4 12 7 18c1.5 2.8 3.3 4 5 5 1.7-1 3.5-2.2 5-5 3-6 1-12-5-17z" fill="var(--rust)"/></svg>
+  <svg class="leaf" style="right:70px;bottom:-14px;width:70px;transform:rotate(40deg);opacity:.45" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C6 6 4 12 7 18c1.5 2.8 3.3 4 5 5 1.7-1 3.5-2.2 5-5 3-6 1-12-5-17z" fill="var(--gold)"/></svg>
+  <div class="wrap">
+    <p class="hand">내 걸음에<br>자신감을 더해보세요</p>
+    <span class="pill">참여 신청 · 문의</span>
+    <div class="phone">
+      <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+      <a class="num" id="num" href="tel:01079382627">010-7938-2627</a>
+    </div>
+    <p class="sub">담당 매니저에게 문의해 주세요 · 선착순 8명</p>
+    <button class="copy" id="copy1" type="button">번호 복사하기</button>
+    <p class="foot"><b>하남시 별자리 학습공간</b> · 하남시가 시민 생활권 가까운 공공·상업시설의 유휴공간을 학습공간으로 운영하는 평생학습 사업입니다.</p>
+  </div>
+</section>
+
+<div class="bar" id="bar" role="region" aria-label="빠른 문의">
+  <div class="in">
+    <div class="t">신청·문의 · 성인 8명 한정<b>010-7938-2627</b></div>
+    <button id="copy2" type="button">번호 복사</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var START_DATE=new Date(2026,10,6), END_DATE=new Date(2026,10,27); /* ✏️ 개강·종강일 (월은 0부터: 10 = 11월) */
+  var PHONE='010-7938-2627';
+
+  var n=new Date(), today=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  var d=Math.round((START_DATE-today)/864e5), el=document.getElementById('dday');
+  if(d>0) el.textContent='개강까지 D-'+d;
+  else if(d===0) el.textContent='오늘 개강!';
+  else if(today<=END_DATE) el.textContent='지금 진행 중';
+
+  function wire(id,label){
+    var b=document.getElementById(id);
+    b.addEventListener('click',function(){
+      function ok(){b.textContent='복사됐어요';setTimeout(function(){b.textContent=label},1800)}
+      function no(){var r=document.createRange();r.selectNodeContents(document.getElementById('num'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='번호를 길게 눌러 복사'}
+      try{navigator.clipboard.writeText(PHONE).then(ok,no)}catch(e){no()}
+    });
+  }
+  wire('copy1','번호 복사하기'); wire('copy2','번호 복사');
+
+  /* 하단 신청 영역이 보이면 고정 바 숨김 */
+  var bar=document.getElementById('bar'), call=document.getElementById('call');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){bar.classList.toggle('hide',e[0].isIntersecting)},{threshold:.2}).observe(call);
+  }
+})();
+</script>
+
+</body>
+</html>
